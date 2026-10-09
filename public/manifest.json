@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "BugTrail",
+  "short_name": "BugTrail",
+  "version": "0.1.0",
+  "description": "Debug by workflow, not by browser tab. Ties failed requests and errors to the action that caused them, ranks them, and writes the bug report.",
+  "minimum_chrome_version": "116",
+  "permissions": ["debugger", "sidePanel", "storage"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "BugTrail",
+    "default_popup": "src/pages/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "src/pages/sidepanel.html"
+  },
+  "devtools_page": "src/pages/devtools.html",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": []
+}

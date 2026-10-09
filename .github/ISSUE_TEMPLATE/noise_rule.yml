@@ -1,0 +1,18 @@
+name: Noise rule
+description: A message or request that shows up everywhere and is never the bug
+labels: [noise-rule, good first issue]
+body:
+  - type: textarea
+    id: example
+    attributes:
+      label: Example message or URL
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it noise?
+      description: Where does it come from (framework, browser, extension…) and why is it safe to rank it low?
+    validations:
+      required: true

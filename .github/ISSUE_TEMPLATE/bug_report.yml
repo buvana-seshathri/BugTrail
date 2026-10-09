@@ -1,0 +1,27 @@
+name: Bug report
+description: Something in BugTrail doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Paste a BugTrail Markdown report if you can (it's already redacted).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: BugTrail and Chrome versions
+      placeholder: BugTrail 0.1.0, Chrome 141
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where?
+      options: [Side panel, DevTools tab, Popup, Copied report]

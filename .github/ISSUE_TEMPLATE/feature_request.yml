@@ -1,0 +1,20 @@
+name: Idea or feature request
+description: Suggest a way BugTrail could make debugging easier
+labels: [idea]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's painful today?
+      description: Describe the debugging or testing situation, not the solution yet.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who are you, mostly?
+      options: [Developer, QA / tester, API tester, Other]

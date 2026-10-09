@@ -1,0 +1,150 @@
+/*
+ * BugTrail design tokens — the single source of truth for both themes.
+ * Mirrors the "Theme — light & dark" board in the design canvas.
+ * Components must use these variables, never raw hex values.
+ */
+
+@import '@fontsource/ibm-plex-sans/latin-400.css';
+@import '@fontsource/ibm-plex-sans/latin-500.css';
+@import '@fontsource/ibm-plex-sans/latin-600.css';
+@import '@fontsource/jetbrains-mono/latin-400.css';
+@import '@fontsource/jetbrains-mono/latin-600.css';
+@import '@fontsource/bricolage-grotesque/latin-700.css';
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bt-bg: #f5f6f8;
+  --bt-surface: #ffffff;
+  --bt-raised: #eef0f3;
+  --bt-border: #dadfe6;
+  --bt-fg: #12161c;
+  --bt-muted: #5a6472;
+  --bt-faint: #a9b1bc;
+  --bt-code: #f7f8fa;
+
+  --bt-brand: #ef4f43;
+  --bt-accent: #0b8577;
+  --bt-on-accent: #ffffff;
+  --bt-accent-bg: #e0f4f1;
+
+  --bt-err: #c9291e;
+  --bt-err-bg: #fdecea;
+  --bt-warn: #9a5b00;
+  --bt-warn-bg: #fff3dc;
+  --bt-slow: #3557d6;
+  --bt-slow-bg: #e8edff;
+  --bt-ok: #1e7f46;
+  --bt-ok-bg: #e3f5ea;
+
+  --bt-shadow: 0 1px 2px rgba(18, 22, 28, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bt-bg: #0e1116;
+    --bt-surface: #151a21;
+    --bt-raised: #1c222b;
+    --bt-border: #29313c;
+    --bt-fg: #e6eaf0;
+    --bt-muted: #97a1af;
+    --bt-faint: #4a5463;
+    --bt-code: #10141a;
+
+    --bt-brand: #ff6b5e;
+    --bt-accent: #34c7b5;
+    --bt-on-accent: #06231f;
+    --bt-accent-bg: #12312d;
+
+    --bt-err: #ff6b5e;
+    --bt-err-bg: #3a1b1a;
+    --bt-warn: #f5b544;
+    --bt-warn-bg: #36290f;
+    --bt-slow: #8ea8ff;
+    --bt-slow-bg: #1e2645;
+    --bt-ok: #5bd68f;
+    --bt-ok-bg: #15301f;
+
+    --bt-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bt-bg: #0e1116;
+  --bt-surface: #151a21;
+  --bt-raised: #1c222b;
+  --bt-border: #29313c;
+  --bt-fg: #e6eaf0;
+  --bt-muted: #97a1af;
+  --bt-faint: #4a5463;
+  --bt-code: #10141a;
+
+  --bt-brand: #ff6b5e;
+  --bt-accent: #34c7b5;
+  --bt-on-accent: #06231f;
+  --bt-accent-bg: #12312d;
+
+  --bt-err: #ff6b5e;
+  --bt-err-bg: #3a1b1a;
+  --bt-warn: #f5b544;
+  --bt-warn-bg: #36290f;
+  --bt-slow: #8ea8ff;
+  --bt-slow-bg: #1e2645;
+  --bt-ok: #5bd68f;
+  --bt-ok-bg: #15301f;
+
+  --bt-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+:root {
+  --bt-font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  --bt-font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --bt-font-display: 'Bricolage Grotesque', var(--bt-font-ui);
+  --bt-radius-sm: 6px;
+  --bt-radius: 8px;
+  --bt-radius-lg: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bt-bg);
+  color: var(--bt-fg);
+  font-family: var(--bt-font-ui);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bt-accent);
+  outline-offset: 2px;
+}
+
+.mono {
+  font-family: var(--bt-font-mono);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
